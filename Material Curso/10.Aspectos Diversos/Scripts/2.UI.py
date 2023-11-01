@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 from pyspark.sql.types import *
 from pyspark import StorageLevel
 
