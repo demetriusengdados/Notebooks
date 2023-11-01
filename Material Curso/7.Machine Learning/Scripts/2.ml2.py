@@ -1,9 +1,8 @@
-#Prof. Fernando Amaral
 from pyspark.ml.feature import RFormula
 from pyspark.ml.classification import DecisionTreeClassifier
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
-churn = spark.read.csv("/home/fernando/download/Churn.csv",inferSchema=True, header=True, sep=";")
+churn = spark.read.csv("/home/demetrius/download/Churn.csv",inferSchema=True, header=True, sep=";")
 churn.show(3)
 
 

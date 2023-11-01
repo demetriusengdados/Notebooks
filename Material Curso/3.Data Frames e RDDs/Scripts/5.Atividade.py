@@ -1,6 +1,6 @@
 #Prof. Fernando Amaral
-clientes = spark.read.load("/home/fernando/download/Atividades/Clientes.parquet")
-vendas = spark.read.load("/home/fernando/download/Atividades/Vendas.parquet")
+clientes = spark.read.load("/home/demetrius/download/Atividades/Clientes.parquet")
+vendas = spark.read.load("/home/demetrius/download/Atividades/Vendas.parquet")
 
 from pyspark.sql import functions as Func
 

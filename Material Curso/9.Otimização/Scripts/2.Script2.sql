@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 from pyspark import StorageLevel
 
 spark.sql("use desp")

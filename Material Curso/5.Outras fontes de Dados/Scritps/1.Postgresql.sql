@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 sudo apt-get update
 sudo apt-get update && apt-get install postgresql-12
 

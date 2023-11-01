@@ -2,7 +2,7 @@ from pyspark.ml.regression import LinearRegression, RandomForestRegressor
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.feature import VectorAssembler
 
-Carros_temp = spark.read.csv("/home/fernando/download/Carros.csv",inferSchema=True, header=True, sep=";")
+Carros_temp = spark.read.csv("/home/demetrius/download/Carros.csv",inferSchema=True, header=True, sep=";")
 Carros_temp.show()
 
 Carros = Carros_temp.select("Consumo","Cilindros","Cilindradas","HP")

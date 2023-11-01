@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 spark-sql;
 
 use vendasvarejo;

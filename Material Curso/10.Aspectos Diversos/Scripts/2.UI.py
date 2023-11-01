@@ -1,7 +1,7 @@
 from pyspark.sql.types import *
 from pyspark import StorageLevel
 
-despachantes = spark.read.csv("/home/fernando/download/despachantes.csv", header=False, inferSchema=True)
+despachantes = spark.read.csv("/home/demetrius/download/despachantes.csv", header=False, inferSchema=True)
 despachantes.show()
 
 despachantes.cache()

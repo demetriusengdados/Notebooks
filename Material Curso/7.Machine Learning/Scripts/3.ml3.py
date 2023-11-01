@@ -1,9 +1,8 @@
-#Prof. Fernando Amaral
 from pyspark.ml.regression import LinearRegression
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.feature import VectorAssembler
 
-Carros_temp = spark.read.csv("/home/fernando/download/Carros.csv",inferSchema=True, header=True, sep=";")
+Carros_temp = spark.read.csv("/home/demetius/download/Carros.csv",inferSchema=True, header=True, sep=";")
 Carros_temp.show(5)
 
 #apenas colunas que vamos usar

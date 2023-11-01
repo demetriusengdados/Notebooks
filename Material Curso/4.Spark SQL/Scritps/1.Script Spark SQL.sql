@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 
@@ -10,7 +9,7 @@ spark.sql("use desp").show()
 
 #criar tabela gerenciada
 arqschema = "id INT, nome STRING, status STRING, cidade STRING, vendas INT, data STRING"
-despachantes = spark.read.csv("/home/fernando/download/despachantes.csv", header=False, schema=arqschema)
+despachantes = spark.read.csv("/home/demetrius/download/despachantes.csv", header=False, schema=arqschema)
 despachantes.write.saveAsTable("Despachantes")
 
 #mostrar que a tabela existe
@@ -44,9 +43,9 @@ despachantes.show()
 
 #criar tabela não gerenciada
 #salvamos novamente no formato parquet, em outro diretorio
-despachantes.write.format("parquet").save("/home/fernando/desparquet") 
+despachantes.write.format("parquet").save("/home/demetrius/desparquet") 
 #informar o caminho 
-despachantes.write.option("path", "/home/fernando/desparquet").saveAsTable("Despachantes_ng")
+despachantes.write.option("path", "/home/demetrius/desparquet").saveAsTable("Despachantes_ng")
 
 #como saber se uma tabela é gerenciada ou não?
 #podemos observar que despachantes não mostra o caminho
@@ -88,7 +87,7 @@ despachantes.groupBy("cidade").agg(sum("vendas")).orderBy(Func.col("sum(vendas)"
 ##
 
 recschema = "idrec INT, datarec STRING, iddesp INT"
-reclamacoes = spark.read.csv("/home/fernando/download/reclamacoes.csv", header=False, schema=recschema)
+reclamacoes = spark.read.csv("/home/demetrius/download/reclamacoes.csv", header=False, schema=recschema)
 reclamacoes.write.saveAsTable("reclamacoes")
 
 #inner join

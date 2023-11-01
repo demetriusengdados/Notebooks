@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *

@@ -1,9 +1,8 @@
-#Prof. Fernando Amaral
 from pyspark.ml.feature import RFormula
 from pyspark.ml.classification import NaiveBayes
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-iris = spark.read.csv("/home/fernando/download/iris.csv",inferSchema=True, header=True)
+iris = spark.read.csv("/home/demetrius/download/iris.csv",inferSchema=True, header=True)
 iris.show(3)
 
 

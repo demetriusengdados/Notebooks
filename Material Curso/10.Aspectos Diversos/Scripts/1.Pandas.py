@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 import findspark
 findspark.init()
 import pyspark
@@ -9,7 +8,7 @@ spark = SparkSession.builder.appName("Exemplo").getOrCreate()
 
 import pandas as pd
 #pandas
-churn = pd.read_csv("/home/fernando/download/Churn.csv",  sep=";")
+churn = pd.read_csv("/home/demetrius/download/Churn.csv",  sep=";")
 type(churn)
 
 #transforma df spark

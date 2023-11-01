@@ -1,9 +1,8 @@
-#Prof. Fernando Amaral
-clientes = spark.read.load("/home/fernando/download/Atividades/Clientes.parquet")
-vendas = spark.read.load("/home/fernando/download/Atividades/Vendas.parquet")
-itensvendas = spark.read.load("/home/fernando/download/Atividades/ItensVendas.parquet")
-produtos = spark.read.load("/home/fernando/download/Atividades/Produtos.parquet")
-vendedores = spark.read.load("/home/fernando/download/Atividades/Vendedores.parquet")
+clientes = spark.read.load("/home/demetrius/download/Atividades/Clientes.parquet")
+vendas = spark.read.load("/home/demetrius/download/Atividades/Vendas.parquet")
+itensvendas = spark.read.load("/home/demetrius/download/Atividades/ItensVendas.parquet")
+produtos = spark.read.load("/home/demetrius/download/Atividades/Produtos.parquet")
+vendedores = spark.read.load("/home/demetrius/download/Atividades/Vendedores.parquet")
 
 spark.sql("create database VendasVarejo")
 

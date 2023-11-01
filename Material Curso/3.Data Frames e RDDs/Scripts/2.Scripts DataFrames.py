@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 #criar um data frame simples, sem schema
 from pyspark.sql import SparkSession
 df1 = spark.createDataFrame([("Pedro",10),("Maria",20),("José",40)])
@@ -41,11 +40,11 @@ df3.columns
 from pyspark.sql.types import *
 arqschema = "id INT, nome STRING, status STRING, cidade STRING, vendas INT, data STRING"
 #o caminho pode mudar, download é a pasta que você baixou com dados de exemplo
-despachantes = spark.read.csv("/home/fernando/download/despachantes.csv", header=False, schema=arqschema)
+despachantes = spark.read.csv("/home/demetrius/download/despachantes.csv", header=False, schema=arqschema)
 despachantes.show()
 
 #outro exemplo, inferindo schema, usando load e informado tipo
-desp_autoschema = spark.read.load("/home/fernando/download/despachantes.csv",
+desp_autoschema = spark.read.load("/home/demetrius/download/despachantes.csv",
                      format="csv", sep=",", inferSchema=True, header=False)
 desp_autoschema.show()
 
@@ -77,27 +76,27 @@ despachantes2.select("data").groupBy(year("data")).count().show()
 despachantes2.select(Func.sum("vendas")).show()
 
 #salvar, são diretórios
-despachantes.write.format("parquet").save("/home/fernando/dfimportparquet")
-despachantes.write.format("csv").save("/home/fernando/dfimportcsv")
-despachantes.write.format("json").save("/home/fernando/dfimportjson")
-despachantes.write.format("orc").save("/home/fernando/dfimportorc")
+despachantes.write.format("parquet").save("/home/demetrius/dfimportparquet")
+despachantes.write.format("csv").save("/home/demmetrius/dfimportcsv")
+despachantes.write.format("json").save("/home/demetrius/dfimportjson")
+despachantes.write.format("orc").save("/home/demetrius/dfimportorc")
 
 #ler dados
-par = spark.read.format("parquet").load("/home/fernando/dfimportparquet/despachantes.parquet")
+par = spark.read.format("parquet").load("/home/demetrius/dfimportparquet/despachantes.parquet")
 par.show()
 par.schema()
 
-js = spark.read.format("json").load("/home/fernando/dfimportjson/despachantes.json")
+js = spark.read.format("json").load("/home/demetrius/dfimportjson/despachantes.json")
 js.show()
 js.schema()
 
-or = spark.read.format("orc").load("/home/fernando/dfimportorc/despachantes.orc")
+or = spark.read.format("orc").load("/home/demetrius/dfimportorc/despachantes.orc")
 or.show()
 or.schema()
 
-cs = spark.read.format("csv").load("/home/fernando/dfimportcsv/despachantes.csv")
+cs = spark.read.format("csv").load("/home/demetrius/dfimportcsv/despachantes.csv")
 cs.show()
 cs.schema()
 arqschema = "id INT, nome STRING, status STRING, cidade STRING, vendas INT, data STRING"
 
-cs2 = spark.read.format("csv").load("/home/fernando/dfimportcsv/despachantes.csv", schema=arqschema)
+cs2 = spark.read.format("csv").load("/home/demetrius/dfimportcsv/despachantes.csv", schema=arqschema)

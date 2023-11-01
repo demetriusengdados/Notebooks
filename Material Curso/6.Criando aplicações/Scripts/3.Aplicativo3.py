@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 import sys, getopt
 from pyspark.sql import SparkSession
 

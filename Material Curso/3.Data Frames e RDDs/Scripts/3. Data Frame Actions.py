@@ -1,4 +1,3 @@
-#Prof. Fernando Amaral
 #formato tabular
 despachantes.show(1)
 
